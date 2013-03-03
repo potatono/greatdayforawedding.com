@@ -218,3 +218,17 @@ h2 {
 .day sup {
     font-size: smaller;
 }
+
+hr {
+    border: none;
+    border-top: 1px solid #cdbc9e;
+}
+
+.home {
+    background-image: url('home-button.png');
+    background-repeat: no-repeat;
+    display: block;
+    width: 15px;
+    height: 16px;
+    text-decoration:none;
+}

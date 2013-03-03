@@ -1,0 +1,66 @@
+h1 {
+	text-align: left;
+	color: #f3c6ae;
+	font-size: 25.73pt;
+}
+
+h3 {
+	background-image: url('h3-bg.png');
+	background-repeat: no-repeat;
+	background-position: 100% 0px;
+	font-family: "Raleway";
+	font-size: 18.47pt;
+	padding-left: 20px;
+	text-transform: lowercase;
+	color: #878786;
+	padding-top: 2px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+.body {
+	width: 300px;
+}
+
+.main {
+	background-image: url('main-bg.png');
+	background-repeat: no-repeat;
+	background-position: 100% 0;
+	padding-top: 60px;
+	font-family: "Raleway";
+}
+
+.big-hex {
+	background-repeat: no-repeat;
+	width: 181px;
+	height: 209px;
+	position: absolute;
+	text-align: center;
+	padding-top: 70px;	
+}
+
+.hilton-garden {
+	background-image: url('hex-bg-red.png');
+	top: 147px;
+	left: 585px;
+}
+
+.big-hex div:last-of-type {
+	margin-top: 10px;
+}
+
+.holiday-inn-express {
+	background-image: url('hex-bg-brown.png');
+	top: 306px;
+	left: 494px;
+}
+
+.best-western {
+	background-image: url('hex-bg-gold.png');
+	top: 306px;
+	left: 676px;
+}
+
+a {
+	color: black;
+}

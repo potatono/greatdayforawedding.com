@@ -92,11 +92,9 @@ var APP = (function() {
 	}
 
 	function onHexClick(hex) {
-		var url = hex.getAttribute('data-href') || 
-			hex.getAttribute('data-img').replace('.jpg','');
-
-		alert('Coming soon. Stay tuned.')
-		//window.location.href = url;
+		var url = hex.getAttribute('data-href');
+		if (url)
+			window.location.href = url;
 	}
 
 	function buildHexes() {
@@ -107,12 +105,14 @@ var APP = (function() {
 
 	function init() {
 		canvas = $('canvas')[0];
-		ctx = canvas.getContext('2d');
 
-		setHexClip();
+		if (canvas) {
+			ctx = canvas.getContext('2d');
+			setHexClip();
+			buildHexes();
+		}
+
 		$(function() { Kerning.live(); });
-
-		buildHexes();
 	}
 
 	$(window).load(init);

@@ -3,8 +3,8 @@
 	<title>Great Day for a Wedding</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 	<script src="kerning.js"></script>
-	<script src="app.js"></script>
-	<link rel="stylesheet" href="app.css" type="text/css" />
+	<script src="app.js?ver=2"></script>
+	<link rel="stylesheet" href="app.css?ver=2" type="text/css" />
 </head>
 <body>
 	<div class="main">
@@ -22,24 +22,24 @@
 		<img src="photo-app.jpg" />
 
 		<div class="hex-row">
-			<div class="hex accomodations"><div class="label">Accomodations</div></div>
+			<div data-href="accomodations" class="hex accomodations"><div class="label">Accomodations</div></div>
 			<div class="hex weekday"><div class="label">Friday</div></div>
 		</div>	
 		<div class="hex-row">
-			<div class="hex location"><div class="label">Location</div></div>
+			<div data-href="location" class="hex location"><div class="label">Location</div></div>
 			<div class="hex month"><div class="label">September</div></div>
 			<div class="hex day"><div class="label">27<sup>th</sup></div></div>
-			<div class="hex contact"><div class="label">Contact</div></div>
+			<div data-href="contact" class="hex contact"><div class="label">Contact</div></div>
 		</div>
 		<div class="hex-row">
-			<div class="hex things-to-do"><div class="label">Things to do</div></div>
+			<div data-href="things-to-do" class="hex things-to-do"><div class="label">Things to do</div></div>
 			<div class="hex year"><div class="label">2013</div></div>
-			<div class="hex registry"><div class="label">Registry</div></div>		
+			<div data-href="registry" class="hex registry"><div class="label">Registry</div></div>		
 		</div>
 		<div class="hex-row">
-			<div class="hex people"><div class="label">People</div></div>
-			<div class="hex rsvp"><div class="label">RSVP</div></div>
-			<div class="hex photo-app"><div class="label">Photo App</div></div>
+			<div data-href="people" class="hex people"><div class="label">People</div></div>
+			<div data-href="rsvp" class="hex rsvp"><div class="label">RSVP</div></div>
+			<div data-href="photo-app" class="hex photo-app"><div class="label">Photo App</div></div>
 		</div>
 	</div>
 </body>
