@@ -1,0 +1,151 @@
+@import url(http://fonts.googleapis.com/css?family=Alex+Brush);
+@import url(http://fonts.googleapis.com/css?family=Raleway:200);
+
+@font-face {
+    font-family: "Prisma";
+    src: url('prisma.otf');
+}
+
+@font-face {
+    font-family: "GeoSansLight";
+    src: url('GeosansLight.otf');
+}
+
+body {
+    background-image: url('bg.png');
+}
+
+* {
+    text-rendering: optimizeLegibility;
+}
+
+.main {
+    width: 970px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: "Prisma";
+    font-size: 42.22pt;
+    font-weight: normal;
+    color: #c0ab94;
+    text-align:center;
+    margin:0;
+}
+
+h2 {
+    font-family: "Alex Brush";
+    font-size: 37.89pt;
+    line-height: 37.89pt;
+    color: #fcb092;
+    text-align: center;
+    font-weight: normal;
+    margin:0;
+}
+
+.hex {
+    width: 160px;
+    height: 140px;
+    font-size: 8.52pt;
+    font-family: "Raleway";
+    color: "black";
+    text-align: center;
+    cursor: pointer;
+    margin-right: 80px;
+
+}
+
+.hex-row .hex:last-of-type {
+    margin-right: 0;
+}
+
+.hex-row {
+    margin-top: -72px;
+    margin-left: 40px;
+}
+
+.hex-row:first-of-type {
+    margin-top: 20px;
+}
+
+.hex-row:first-of-type .hex:first-of-type {
+}
+
+.hex-row:nth-child(odd) .hex:first-of-type {
+    margin-left: 123px;
+}
+.hex-row:nth-child(even) {
+}
+
+.hex-row:nth-of-type(3) .hex:first-of-type {
+}
+
+.hex-row:nth-of-type(4) .hex:first-of-type {
+    margin-left: 245px;
+}
+
+.hex.over {
+    color: rgba(255,0,0,0.3);
+    font-size: 16pt;
+}
+
+.accomodations.over {
+    color: rgba(241,181,155, 0.7);
+    font-size: 14pt;
+}
+
+.location.over {
+    color: rgba(95,117,105, 0.7);
+}
+
+.things-to-do.over {
+    color: rgba(196,106,59,0.7);
+}
+.people.over {
+    color: rgba(209,164,94,0.7);
+}
+.rsvp.over {
+    color: rgba(167,52,52,0.7);
+}
+.registry.over {
+    color: rgba(178,170,159,0.7);
+}
+.photo-app.over {
+    color: rgba(93,88,119,0.7);
+}
+.year {
+    color: rgb(172,139,132);
+    font-family: "Prisma";
+    font-size: 40.37pt;
+    cursor: auto;
+    -letter-kern: -2px -5px -10px 0;
+}
+.weekday {
+    color: rgb(224,176,95);
+    font-family: "Prisma";
+    font-size: 31.7pt;
+    cursor: auto;
+    -letter-kern: 0 0 0 -4px -7px;
+}
+.month {
+    text-transform: uppercase;
+    font-size: 17.29pt;
+    font-family: "Raleway";
+    color: rgb(115, 142, 190);
+    cursor: auto;
+}
+.day {
+    color: rgb(220,180,121);
+    font-family: "GeoSansLight";
+    font-size: 49.87pt;
+}
+.day sup {
+    font-size: smaller;
+}
+.contact.over {
+    color: rgba(210,189,162,0.7);
+}
+
+img {
+    display: none;
+}

@@ -1,0 +1,45 @@
+<html>
+<head>
+	<title>Great Day for a Wedding</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	<script src="kerning.js"></script>
+	<script src="app.js"></script>
+	<link rel="stylesheet" href="app.css" type="text/css" />
+</head>
+<body>
+	<div class="main">
+		<h1>Angela &amp; Justin</h1>
+		<h2>Are Getting Married</h2>
+
+		<img src="accomodations.jpg" />
+		<img src="location.jpg" />
+		<img src="contact.jpg" />
+		<img src="things-to-do.jpg" />
+		<img src="registry.jpg" />
+		<img src="people.jpg" />
+		<img src="rsvp.jpg" />
+		<img src="photo-app.jpg" />
+
+		<div class="hex-row">
+			<canvas class="hex accomodations" data-img="accomodations.jpg" data-offset-x="-25" data-offset-y="-100">Accomodations</canvas>
+			<canvas class="hex weekday">Friday</canvas>
+		</div>	
+		<div class="hex-row">
+			<canvas class="hex location" data-img="location.jpg" data-offset-x="-10" data-offset-y="-10">Location</canvas>
+			<canvas class="hex month" data-text-offset-y="60">September</canvas>
+			<canvas class="hex day" data-text-offset-y="25">27<sup>th</sup></canvas>
+			<canvas class="hex contact" data-img="contact.jpg">Contact</canvas>
+		</div>
+		<div class="hex-row">
+			<canvas class="hex things-to-do" data-img="things-to-do.jpg" data-offset-x="-10">Things to do</canvas>
+			<canvas class="hex year" data-text-offset-y="45">2013</canvas>
+			<canvas class="hex registry" data-img="registry.jpg" data-offset-x="-55" data-offset-y="-50">Registry</canvas>		
+		</div>
+		<div class="hex-row">
+			<canvas class="hex people" data-img="people.jpg" data-offset-x="-40" data-offset-y="-40">People</canvas>
+			<canvas class="hex rsvp" data-img="rsvp.jpg">RSVP</canvas>
+			<canvas class="hex photo-app" data-img="photo-app.jpg">Photo App</canvas>
+		</div>
+	</div>
+</body>
+</html>
