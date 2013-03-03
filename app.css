@@ -191,11 +191,12 @@ h2 {
 }
 .weekday .label {
     background-image: none;
-    top: 55px;
+    top: 50px;
     vertical-align: middle;
     color: rgb(224,176,95);
     font-family: "Prisma";
     font-size: 31.7pt;
+    line-height: 40px;
     cursor: auto;
     -letter-kern: 0 0 0 -4px -7px;
 }
