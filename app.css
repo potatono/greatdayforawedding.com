@@ -19,9 +19,12 @@ body {
     text-rendering: optimizeLegibility;
 }
 
-.main {
-    width: 970px;
-    margin: 0 auto;
+img {
+    display: none;
+}
+
+canvas {
+    display: none;
 }
 
 h1 {
@@ -43,16 +46,111 @@ h2 {
     margin:0;
 }
 
+.main {
+    width: 970px;
+    margin: 0 auto;
+}
+
 .hex {
+    position: relative;
+    display: inline-block;
     width: 160px;
     height: 140px;
+    cursor: pointer;
+    margin-right: 80px;
+    background-repeat: no-repeat;
+}
+
+.hex .label {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    text-align: center;
     font-size: 8.52pt;
     font-family: "Raleway";
     color: "black";
-    text-align: center;
-    cursor: pointer;
-    margin-right: 80px;
+    background-image: url('small-label-bg.png');
+    background-repeat: no-repeat;
+    background-position: 50% 0px;
+    height: 13px;
+    padding-top: 2px;
+}
 
+.hex.over .label {
+    background-image: url('large-label-bg.png');
+    background-position: 0px 60px;
+    width: 100%;
+    top: 0px;
+    padding-top: 62px;
+    height: 78px;
+    font-size: 15pt;
+    z-index: 2;
+}
+
+.hex.over img {
+    z-index: 1;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.accomodations {
+    background-color: rgba(241,181,155, 0.7);
+    background-image: url('accomodations.jpg');
+    background-position: -25px -100px;
+    vertical-align: text-bottom;
+}
+
+.location {
+    background-color: rgba(95,117,105, 0.7);
+    background-image: url('location.jpg');
+    background-position: -10px -10px;
+}
+
+.month {
+    background-position: 0px 60px;
+}
+
+.day {
+    background-position: 25px;
+}
+
+.contact {
+    background-image: url('contact.jpg');
+    background-color: rgba(210,189,162,0.7);
+}
+
+.things-to-do {
+    background-color: rgba(196,106,59,0.7);
+    background-image: url('things-to-do.jpg');
+    background-position: 0px 25px;
+}
+
+.year {
+    background-position: 0px 45px;
+}
+
+.registry {
+    background-color: rgba(178,170,159,0.7);
+    background-image: url("registry.jpg"); 
+    background-position: -55px -50px;
+}
+
+.people {
+    background-color: rgba(209,164,94,0.7);
+    background-image: url('people.jpg');
+    background-position: -40px -40px;
+}
+
+.rsvp {
+    background-color: rgba(167,52,52,0.7);
+    background-image: url('rsvp.jpg');
+}
+
+.photo-app {
+    background-color: rgba(93,88,119,0.7);
+    background-image: url('photo-app.jpg');
 }
 
 .hex-row .hex:last-of-type {
@@ -68,13 +166,11 @@ h2 {
     margin-top: 20px;
 }
 
-.hex-row:first-of-type .hex:first-of-type {
-}
-
 .hex-row:nth-child(odd) .hex:first-of-type {
-    margin-left: 123px;
+    /*margin-left: 123px;*/
 }
-.hex-row:nth-child(even) {
+.hex-row:nth-child(even) .hex:first-of-type {
+    margin-left: 123px;
 }
 
 .hex-row:nth-of-type(3) .hex:first-of-type {
@@ -84,68 +180,41 @@ h2 {
     margin-left: 245px;
 }
 
-.hex.over {
-    color: rgba(255,0,0,0.3);
-    font-size: 16pt;
-}
-
-.accomodations.over {
-    color: rgba(241,181,155, 0.7);
-    font-size: 14pt;
-}
-
-.location.over {
-    color: rgba(95,117,105, 0.7);
-}
-
-.things-to-do.over {
-    color: rgba(196,106,59,0.7);
-}
-.people.over {
-    color: rgba(209,164,94,0.7);
-}
-.rsvp.over {
-    color: rgba(167,52,52,0.7);
-}
-.registry.over {
-    color: rgba(178,170,159,0.7);
-}
-.photo-app.over {
-    color: rgba(93,88,119,0.7);
-}
-.year {
+.year .label {
+    background-image: none;
+    top: 45px;
     color: rgb(172,139,132);
     font-family: "Prisma";
     font-size: 40.37pt;
     cursor: auto;
     -letter-kern: -2px -5px -10px 0;
 }
-.weekday {
+.weekday .label {
+    background-image: none;
+    top: 55px;
+    vertical-align: middle;
     color: rgb(224,176,95);
     font-family: "Prisma";
     font-size: 31.7pt;
     cursor: auto;
     -letter-kern: 0 0 0 -4px -7px;
 }
-.month {
+.month .label {
+    background-image: none;
+    top: 60px;
     text-transform: uppercase;
     font-size: 17.29pt;
     font-family: "Raleway";
     color: rgb(115, 142, 190);
     cursor: auto;
 }
-.day {
+.day .label {
+    background-image: none;
+    top: 20px;
     color: rgb(220,180,121);
     font-family: "GeoSansLight";
     font-size: 49.87pt;
 }
 .day sup {
     font-size: smaller;
-}
-.contact.over {
-    color: rgba(210,189,162,0.7);
-}
-
-img {
-    display: none;
 }
