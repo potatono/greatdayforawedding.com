@@ -95,9 +95,9 @@ h2 {
     left: 0;
 }
 
-.accomodations {
+.accommodations {
     background-color: rgba(241,181,155, 0.7);
-    background-image: url('accomodations.jpg');
+    background-image: url('accommodations.jpg');
     background-position: -25px -100px;
     vertical-align: text-bottom;
 }
