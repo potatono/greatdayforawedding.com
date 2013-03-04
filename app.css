@@ -102,6 +102,14 @@ h2 {
     vertical-align: text-bottom;
 }
 
+.accommodations .label {
+    font-size: 7.5pt;
+}
+
+.accommodations.over .label {
+    font-size: 13pt;
+}
+
 .location {
     background-color: rgba(95,117,105, 0.7);
     background-image: url('location.jpg');
