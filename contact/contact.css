@@ -1,0 +1,153 @@
+
+.hex-edge {
+	position: absolute;
+	width: 695px;
+	height: 157px;
+	right: 0px;
+	top: 10px;
+	background-image: url('hex-edge-bg.png');
+	background-repeat: no-repeat;
+}
+
+.text {
+	height: 365px;
+	width: 440px;
+	background-color: rgba(236,242,234,0.9);
+	font-family: Raleway;
+	font-size: 18px;
+	position: absolute;
+	right: 0px;
+	top: 35%;
+	text-align: right;
+	padding: 5px;
+	color: black;
+}
+
+a {
+	color: black;
+}
+
+h2 {
+	font-family: Prisma;
+	position: absolute;
+	left: 5%;
+	top: 115px;
+	font-size: 40px;
+	color: rgb(192,170,158);
+}
+
+h3 {
+	text-transform: lowercase;
+	background-color: rgba(252,250,243,0.9);
+	width: 95%;
+	position: absolute;
+	right: 0px;
+	top: 65px;
+	font-family: Raleway;
+	font-size: 24px;
+	height: 23px;
+	padding: 2px 0 0 20px;
+}
+
+h3:before {
+	width: 0; 
+	height: 0; 
+	border-top: 12px solid transparent;
+	border-bottom: 12px solid transparent; 
+	border-right:12px solid rgba(252,250,243,0.9); 
+	content: "";
+	position: absolute;
+	left: -12px;
+	top: 0px;
+}
+
+.home {
+	position: absolute;
+	left: 5%;
+	top: 65px;
+	background-image: url('home.png');
+}
+
+.hex-dialog {
+	background-image: url('hex-dialog-bg.png');
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 150px;
+	left: 50%;
+	margin-left: -272px;
+	width: 544px;
+	height: 470px;
+	text-align: center;
+	font-family: GeoSansLight;
+}
+
+.hex-dialog p {
+	margin-top: 50px;
+	color: #bf6262;
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 18px;
+}
+
+.hex-dialog input {
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	height: 30px;
+	border-radius: 15px;
+	padding: 5px;
+	background-color: #eee;
+	border-style: inset;
+	border-width: 2px;
+	font-family: GeoSansLight;
+	font-size: 18px;
+}
+
+.hex-dialog textarea {
+	display: block;
+	width: 300px;
+	height: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 15px;
+	padding: 5px;
+	background-color: #eee;
+	margin-top: 15px;
+	border-style: inset;
+	border-width: 2px;
+	font-family: GeoSansLight;
+	font-size: 18px;
+}
+
+.hex-dialog button {
+	border-radius: 15px;
+	width: 100px;
+	display: block;
+	margin-top: 15px;
+	background-color: #bf6262;
+	height: 25px;
+	font-family: GeoSansLight;
+	font-size: 18px;
+	color: white;
+	margin-left: auto;
+	margin-right: auto;
+	text-transform: uppercase;
+}
+
+::-webkit-input-placeholder {
+	text-align: center;
+}
+
+::-moz-placeholder {
+	text-align: center;
+}
+
+:-moz-placeholder {
+	text-align: center;
+}
+
+:-ms-input-placeholder {
+	text-align: center;
+}
