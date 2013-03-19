@@ -190,11 +190,11 @@ h2 {
 
 .year .label {
     background-image: none;
-    top: 50px;
+    top: 40px;
     color: rgb(172,139,132);
     font-family: "Prisma";
-    font-size: 40.37pt;
-    line-height: 40px;
+    font-size: 55px;
+    line-height: 55px;
     cursor: auto;
     -letter-kern: -2px -5px -10px 0;
 }
