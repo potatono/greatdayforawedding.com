@@ -40,7 +40,7 @@ var APP = (function() {
 		if (src) {
 			var color = $(hex).css('background-color');
 			$(hex).css('background-color','inherit');
-			var img = $('img[src="' + src + '"]').get(0);
+			var img = $('img[src="img/' + src + '"]').get(0);
 			var pos = getBackgroundPosition(hex);
 
 			ctx.clearRect(0,0,160,140);

@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>Contact - Great Day for a Wedding</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	<script src="/js/kerning.js"></script>
+	<script src="/js/app.js?ver=4"></script>
+	<link rel="stylesheet" href="/css/app.css?ver=4" type="text/css" />
+	<link rel="stylesheet" href="contact.css?ver=4" type="text/css" />
+</head>
+<body>
+	<div class="hex-edge"></div>
+
+	<a class="home" href="..">&nbsp;</a>
+	<h3>Contact</h3>
+	<h2>Drop us a line</h2>
+
+	<div class="hex-dialog">
+		<form method="post" action="/cgi-bin/email.cgi">
+			<p>Question?  Concern?  General Well Wish?
+			Feel free to send Angela and Justin
+			a message here.</p>
+
+			<input type="text" name="name" placeholder="Enter Your Name" />
+			<textarea name="question" placeholder="Enter Message Here"></textarea>
+			<button onclick="$('form').submit()" onmouseover="$('#valid').val(1);">Send It</button>
+			<input type="hidden" name="valid" id="valid" value="0" />
+		</form>
+
+	</div>
+
+</body>
+</html>
