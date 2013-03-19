@@ -21,12 +21,17 @@
 			a message here.</p>
 
 			<input type="text" name="name" placeholder="Enter Your Name" />
-			<textarea name="question" placeholder="Enter Message Here"></textarea>
+			<textarea name="message" placeholder="Enter Message Here"></textarea>
 			<button onclick="$('form').submit()" onmouseover="$('#valid').val(1);">Send It</button>
 			<input type="hidden" name="valid" id="valid" value="0" />
 		</form>
-
 	</div>
+
+	<script>
+		if (/thank_you/.test(window.location.href)) {
+			$('.hex-dialog').html('<h1>Thank you!</h1><h2>Your message has been sent.</h2>');
+		}
+	</script>
 
 </body>
 </html>

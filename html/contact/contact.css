@@ -134,6 +134,7 @@ h3:before {
 	margin-left: auto;
 	margin-right: auto;
 	text-transform: uppercase;
+	cursor: pointer;
 }
 
 ::-webkit-input-placeholder {
@@ -150,4 +151,13 @@ h3:before {
 
 :-ms-input-placeholder {
 	text-align: center;
+}
+
+.hex-dialog h1 {
+	margin-top: 100px;
+}
+
+.hex-dialog h2 {
+	margin-top: 100px;
+	width: 480px;
 }
