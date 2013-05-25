@@ -15,6 +15,7 @@
 				$('.hidden').show();
 			}
 		}
+
 	</script>
 </head>
 <body>
@@ -72,6 +73,11 @@
 		</form>
 
 	</div>
-
+	<script>
+		if (/thank_you/.test(window.location.href)) {
+			$('.hex-dialog').html("<h2 style='margin-top: 250px'>THANK YOU</h2><p style='margin-top: 400px'><a href='/'>Home</a></p>");
+			$('.hidden').show();
+		}
+	</script>
 </body>
 </html>
