@@ -3,12 +3,75 @@
 	<title>RSVP - Great Day for a Wedding</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 	<script src="/js/kerning.js"></script>
-	<script src="/js/app.js?ver=5"></script>
-	<link rel="stylesheet" href="/css/app.css?ver=5" type="text/css" />
+	<script src="/js/app.js?ver=6"></script>
+	<script src="/js/md5.js?ver=6"></script>
+	<link rel="stylesheet" href="/css/app.css?ver=6" type="text/css" />
+	<link rel="stylesheet" href="rsvp.css?ver=6" type="text/css" />
+	<script>
+		var codeHash = "772c0291a44538d1f0a153d74efcc382";
+
+		function checkCode(s) {
+			if (md5(s.toUpperCase()) == codeHash) {
+				$('.hidden').show();
+			}
+		}
+	</script>
 </head>
 <body>
-	<div class="main">
-		<h1>Coming Soon</h1>
+	<div class="hex-edge"></div>
+
+	<a class="home" href="..">&nbsp;</a>
+	<h3>RSVP</h3>
+	<h2>Celebrate With Us</h2>
+
+	<div class="text">
+		<p>
+			When you receive your formal invitation there will be a 	code that you need in order to respond. <br />
+			Please respond by August 22nd.
+		</p>
+
+		<h4>Enter the code below</h4>
+		<form onsubmit="return false">
+			<input id="code" type="text" />
+			<button onclick="checkCode($('#code').val())">Enter</button>
+		</form>
 	</div>
+
+	<div class="smoke hidden">&nbsp;</div>
+
+	<div class="hex-dialog hidden">
+		<form id="rsvp" method="post" action="/cgi-bin/rsvp.cgi">
+			<h2>RSVP</h2>
+			<p>
+				In the box below, please list the following information for  ALL the guests included on the pink envelope of your invitation:
+			</p>
+
+			<ol>
+			<li>Name</li>
+			<li>Will or will not attend</li>
+			<li>Dinner choice: Filet Mignon -OR-
+   			 Lump Crab &amp; Arugula Stuffed Free-Range Chicken -OR- 
+   			 Roasted Butternut Squash Tart with Herb Risotto -OR-
+   			 (if guest is under 12 and will not eat a regular meal) Chicken Fingers</li>
+   			</ol>
+   			
+   			<textarea name="info" placeholder="Enter items 1-3 for all guests included on invitation."></textarea>
+
+   			<p>Do you or your party have any dietary restrictions? We will do our best to honor all food restrictions</p>
+
+   			<textarea id="restrictions" name="restrictions" placeholder="Enter restrictions here"></textarea>
+
+   			<p>What is your favorite song to dance to?</p>
+
+   			<input type="text" name="favorite" placeholder="Enter Song and Artist(s) Here" />
+
+			<button onclick="$('#rsvp').submit()" onmouseover="$('#valid').val(1);">Send It</button>
+			<input type="hidden" name="valid" id="valid" value="0" />
+   			
+
+		</form>
+
+	</div>
+
 </body>
 </html>

@@ -3,20 +3,33 @@ h1 {
 	color: #f3c6ae;
 	font-size: 25.73pt;
 	line-height: 30px;
+	margin-top: 40px;
 }
 
 h3 {
-	background-image: url('h3-bg.png');
-	background-repeat: no-repeat;
-	background-position: 100% 0px;
-	font-family: "Raleway";
-	font-size: 18.47pt;
-	padding-left: 20px;
 	text-transform: lowercase;
-	color: #878786;
-	padding-top: 2px;
-	margin-bottom: 5px;
-	margin-top: 5px;
+	background-color: rgba(252,250,243,0.9);
+	width: 95%;
+	position: absolute;
+	right: 0px;
+	top: 65px;
+	font-family: Raleway;
+	font-size: 24px;
+	height: 23px;
+	padding: 2px 0 0 20px;
+}
+
+
+h3:before {
+	width: 0; 
+	height: 0; 
+	border-top: 12px solid transparent;
+	border-bottom: 12px solid transparent; 
+	border-right:12px solid rgba(252,250,243,0.9); 
+	content: "";
+	position: absolute;
+	left: -12px;
+	top: 0px;
 }
 
 .body {
@@ -24,7 +37,6 @@ h3 {
 }
 
 .main {
-	background-image: url('main-bg.png');
 	background-repeat: no-repeat;
 	background-position: 100% 0;
 	padding-top: 60px;
@@ -64,4 +76,15 @@ h3 {
 
 a {
 	color: black;
+}
+
+
+.hex-edge {
+	position: absolute;
+	width: 695px;
+	height: 157px;
+	right: 0px;
+	top: 10px;
+	background-image: url('hex-edge-bg.png');
+	background-repeat: no-repeat;
 }

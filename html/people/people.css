@@ -1,0 +1,120 @@
+.main {
+	min-height: 400px;
+}
+.hex-edge {
+	position: absolute;
+	width: 695px;
+	height: 157px;
+	right: 0px;
+	top: 10px;
+	background-image: url('hex-edge-bg.png');
+	background-repeat: no-repeat;
+}
+
+h2 {
+	color: #77a48f;
+}
+
+.hex {
+	width: 150px;
+	height: 130px;
+	margin-right: 77px;
+}
+
+.hex-row {
+	margin-top: -68px;
+}
+
+.hex-group {
+	margin-top: 200px;
+}
+
+.hex-row:nth-of-type(1) .hex:first-of-type,
+.hex-row:nth-of-type(3) .hex:first-of-type {
+	margin-left: 116px;
+
+}
+.hex-row:nth-child(even) .hex:first-of-type {
+    margin-left: 0px;
+}
+.hex-row:nth-of-type(4) .hex:last-of-type {
+	margin-left: 232px;
+}
+
+.hex.lisa {
+	background-image: url('/img/lisa-text.png');
+}
+.hex.eric {
+	background-image: url('/img/eric-text.png');
+}
+.hex.randi {
+	background-image: url('/img/randi-text.png');
+}
+.hex.jill {
+	background-image: url('/img/jill-text.png');
+}
+.hex.jake {
+	background-image: url('/img/jake-text.png');
+}
+.hex.jared {
+	background-image: url('/img/jared-text.png');
+}
+.hex.justin-angela {
+	background-image: url('/img/justin-angela-text.png');
+}
+.hex.mike {
+	background-image: url('/img/mike-text.png');
+}
+.hex.sarah {
+	background-image: url('/img/sarah-text.png');
+}
+
+
+.hex.lisa.over {
+	background-image: url('/img/lisa.png');
+}
+.hex.eric.over {
+	background-image: url('/img/eric.png');
+}
+.hex.randi.over {
+	background-image: url('/img/randi.png');
+}
+.hex.jill.over {
+	background-image: url('/img/jill.png');
+}
+.hex.jake.over {
+	background-image: url('/img/jake.png');
+}
+.hex.jared.over {
+	background-image: url('/img/jared.png');
+}
+.hex.justin-angela.over {
+	background-image: url('/img/justin-angela.png');
+}
+.hex.mike.over {
+	background-image: url('/img/mike.png');
+}
+.hex.sarah.over {
+	background-image: url('/img/sarah.png');
+}
+
+.description {
+	display: none;
+	margin-top: -350px;
+	width: 350px;
+	font-family: "GeoSansLight", sans-serif;
+	font-size: 12pt;
+	margin-left: 660px;
+	text-align: justify;
+}
+.description.show {
+	display:block;
+
+}
+.description h4, .description h5 {
+	text-align: center;
+	margin-bottom: 0;
+	margin-top: 0;
+	font-weight: normal;
+	font-size: 12pt;
+}

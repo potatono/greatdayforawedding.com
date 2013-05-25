@@ -23,35 +23,40 @@ var APP = (function() {
 	}
 
 	function setHexClip() {
+		var w = canvas.width;
+		var h = canvas.height;
+
 		ctx.beginPath();
-   		ctx.moveTo(40,0);
-   		ctx.lineTo(120,0);
-   		ctx.lineTo(160,70);
-   		ctx.lineTo(120,140);
-    	ctx.lineTo(40,140);
-    	ctx.lineTo(0,70);
-    	ctx.lineTo(40,0);
+   		ctx.moveTo(w*0.25,0);
+   		ctx.lineTo(w*0.75,0);
+   		ctx.lineTo(w,h*0.5);
+   		ctx.lineTo(w*0.75,h);
+    	ctx.lineTo(w*0.25,h);
+    	ctx.lineTo(0,h*0.5);
+    	ctx.lineTo(w*0.25,0);
     	ctx.clip();
 	}
 
 	function paintHexBackground(hex) {
 		var src = getBackgroundImageSrc(hex);
+		var w = canvas.width;
+		var h = canvas.height;
 		
 		if (src) {
 			var color = $(hex).css('background-color');
 			$(hex).css('background-color','inherit');
-			var img = $('img[src="img/' + src + '"]').get(0);
+			var img = $('img[src="/img/' + src + '"]').get(0);
 			var pos = getBackgroundPosition(hex);
 
-			ctx.clearRect(0,0,160,140);
+			ctx.clearRect(0,0,w,h);
 			ctx.drawImage(img, pos.x, pos.y);
 
 			var data = "url(" + canvas.toDataURL('image/png') + ")";
 			$(hex).css('background-image', data).css('background-position','0px 0px');
 
-			ctx.clearRect(0,0,160,140);
+			ctx.clearRect(0,0,w,h);
 			ctx.fillStyle = color;
-			ctx.fillRect(0,0,160,140);
+			ctx.fillRect(0,0,w,h);
 
 			$(hex).append($('<img src="' + canvas.toDataURL('image/png') + '" />'));
 			$(hex).mouseover(function() { onHexOver(hex); });
@@ -59,7 +64,7 @@ var APP = (function() {
 			$(hex).click(function() { onHexClick(hex); });
 		}
 		else {
-			ctx.clearRect(0,0,160,140);
+			ctx.clearRect(0,0,w,h);
 			paintHexBorder(hex);
 
 			var data = "url(" + canvas.toDataURL('image/png') + ")";
@@ -68,17 +73,19 @@ var APP = (function() {
 	}
 
 	function paintHexBorder(hex) {
+		var w = canvas.width;
+		var h = canvas.height;
 		ctx.save();
 		ctx.strokeStyle = $(hex).find('.label').css('color');
 		ctx.lineWidth = 5;
 		ctx.beginPath();
-   		ctx.moveTo(40,0);
-   		ctx.lineTo(120,0);
-   		ctx.lineTo(160,70);
-   		ctx.lineTo(120,140);
-    	ctx.lineTo(40,140);
-    	ctx.lineTo(0,70);
-    	ctx.lineTo(40,0);
+   		ctx.moveTo(w*0.25,0);
+   		ctx.lineTo(w*0.75,0);
+   		ctx.lineTo(w,h*0.5);
+   		ctx.lineTo(w*0.75,h);
+    	ctx.lineTo(w*0.25,h);
+    	ctx.lineTo(0,h*0.5);
+    	ctx.lineTo(w*0.25,0);
     	ctx.stroke();
     	ctx.restore();
 	}
