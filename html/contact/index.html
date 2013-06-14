@@ -21,7 +21,7 @@
 			a message here.</p>
 
 			<input type="text" name="name" placeholder="Enter Your Name" />
-			<textarea name="message" placeholder="Enter Message Here"></textarea>
+			<textarea name="message" placeholder="Enter Message Here" onchange="$('#valid').val(1);"></textarea>
 			<button onclick="$('form').submit()" onmouseover="$('#valid').val(1);">Send It</button>
 			<input type="hidden" name="valid" id="valid" value="0" />
 		</form>
