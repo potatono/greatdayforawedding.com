@@ -10,6 +10,10 @@ my $favorite = $query->param('favorite');
 my $valid = $query->param('valid');
 my $message = "RSVP INFORMATION\n\n$info\n\nDIETARY RESTRICTIONS\n\n$restrictions\n\nFAVORITE SONG\n\n$favorite\n";
 
+open(FIL,">>/var/www/prod/greatdayforawedding.com/log/rsvp.log");
+print FIL "RSVP Received on " . scalar(localtime(time)) . ".  Valid=$valid\n$message\n=====\n";
+close(FIL);
+
 if ($valid) {
 	open(FIL,"|/usr/sbin/sendmail -f 'no-reply\@greatdayforawedding.com' -t 'justin\@jplt.com' 'munichborn\@gmail.com'");
 	print FIL "From: \"Great Day For A Wedding\" <no-reply\@greatdayforawedding.com>\n";
